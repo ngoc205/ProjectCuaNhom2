@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Quản trị | Tiểu học Lạc Long Quân</title>
+    
+    <link rel="stylesheet" href="admin.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="admin-container">
+        
+        <aside class="admin-sidebar">
+            <div class="logo">
+            <img src="https://placehold.co/50x50/1e3a8a/white?text=LLQ" alt="Logo Trường">
+            <div class="logo-text">
+                    <h2>LLQ School</h2>
+                    <p>Trang Quản Trị</p>
+            </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">📊</span> Trang tổng quan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item active">
+                            <span class="menu-icon">👨‍🏫</span> Quản lý Cán bộ / GV
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">👨‍🎓</span> Quản lý Học sinh
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">🏫</span> Quản lý Lớp học
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <span class="menu-icon">📅</span> Quản lý Lịch học / TKB
+                        </a>
+                    </li>
+                    <li class="menu-divider"></li>
+                    <li>
+                        <a href="index.html" class="menu-item logout-item">
+                            <span class="menu-icon">🚪</span> Quay lại Trang chủ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <h3>Quản lý Cán bộ & Giáo viên</h3>
+                </div>
+                <div class="topbar-right">
+                    <div class="admin-profile">
+                        <img src="https://placehold.co/40x40/1e3a8a/white?text=AD" alt="Admin Avatar">
+                        <div class="profile-info">
+                            <strong>Bùi Bích Ngọc</strong>
+                            <span>Quản trị viên</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content-body">
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Tổng số cán bộ</span>
+                            <h4>45 Nhân sự</h4>
+                        </div>
+                        <div class="stat-icon bg-blue">👥</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Đang đứng lớp</span>
+                            <h4>38 Giáo viên</h4>
+                        </div>
+                        <div class="stat-icon bg-green">👩‍🏫</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span>Tài khoản mới tạo</span>
+                            <h4>5 Tài khoản</h4>
+                        </div>
+                        <div class="stat-icon bg-orange">🔑</div>
+                    </div>
+                </div>
+
+                <div class="data-table-card">
+                    
+                    <div class="table-toolbar">
+                        <div class="toolbar-left">
+                            <form action="#" class="admin-search-form">
+                                <input type="text" placeholder="Tìm kiếm giáo viên theo tên, mã..." class="search-input">
+                                <button type="submit" class="btn-search-icon">🔍</button>
+                            </form>
+                        </div>
+                        <div class="toolbar-right">
+                            <button class="btn btn-add">+ Thêm Cán bộ mới</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Mã CB</th>
+                                    <th>Họ và Tên</th>
+                                    <th>Tổ chuyên môn</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Trạng thái tài khoản</th>
+                                    <th class="text-center">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>CB0012</strong></td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-sm">Trần</div>
+                                            <div>
+                                                <div class="user-name">Trần Thị B</div>
+                                                <div class="user-email">thib.tran@llq.edu.vn</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Tổ 1 - Khối 1</td>
+                                    <td>0912 345 678</td>
+                                    <td><span class="status-badge active">Đang hoạt động</span></td>
+                                    <td class="text-center">
+                                        <div class="action-buttons">
+                                            <button class="btn-action edit" title="Sửa thông tin">✏️</button>
+                                            <button class="btn-action delete" title="Xóa">🗑️</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CB0013</strong></td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-sm" style="background-color: #f43f5e;">Nguyễn</div>
+                                            <div>
+                                                <div class="user-name">Nguyễn Văn C</div>
+                                                <div class="user-email">vanc.nguyen@llq.edu.vn</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Tổ Năng khiếu (Thể dục)</td>
+                                    <td>0987 654 321</td>
+                                    <td><span class="status-badge active">Đang hoạt động</span></td>
+                                    <td class="text-center">
+                                        <div class="action-buttons">
+                                            <button class="btn-action edit" title="Sửa thông tin">✏️</button>
+                                            <button class="btn-action delete" title="Xóa">🗑️</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CB0014</strong></td>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-sm" style="background-color: #eab308;">Lê</div>
+                                            <div>
+                                                <div class="user-name">Lê Hoàng D</div>
+                                                <div class="user-email">hoangd.le@llq.edu.vn</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Tổ 2 - Khối 2</td>
+                                    <td>0905 111 222</td>
+                                    <td><span class="status-badge locked">Bị khóa</span></td>
+                                    <td class="text-center">
+                                        <div class="action-buttons">
+                                            <button class="btn-action edit" title="Sửa thông tin">✏️</button>
+                                            <button class="btn-action delete" title="Xóa">🗑️</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-pagination">
+                        <span>Hiển thị 1 - 3 trên tổng số 45 cán bộ</span>
+                        <div class="pag-buttons">
+                            <button class="btn-pag" disabled>&lt;</button>
+                            <button class="btn-pag active">1</button>
+                            <button class="btn-pag">2</button>
+                            <button class="btn-pag">3</button>
+                            <button class="btn-pag">&gt;</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
