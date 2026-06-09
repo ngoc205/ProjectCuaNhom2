@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu thông tin | Trường Tiểu học Lạc Long Quân</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="search.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header id="header-placeholder"></header>
+    <main class="search-page">
+        <section class="search-hero">
+            <div class="container text-center">
+                <h2>Cổng tra cứu thông tin</h2>
+                <p>Dành cho Phụ huynh và Khách truy cập</p>
+            </div>
+        </section>
+
+        <section class="search-box-section">
+            <div class="container">
+                <div class="search-box">
+                    <div class="search-tabs">
+                        <button class="tab-btn active" onclick="switchTab('student')">👨‍🎓 Tra cứu Học sinh</button>
+                        <button class="tab-btn" onclick="switchTab('teacher')">👩‍🏫 Tra cứu Giáo viên</button>
+                    </div>
+
+                    <form action="#" class="search-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Nhập tên hoặc mã số..." class="search-input">
+                        </div>
+                        
+                        <div class="filter-group" id="student-filters">
+                            <select class="filter-select">
+                                <option value="">-- Chọn Khối --</option>
+                                <option value="1">Khối 1</option>
+                                <option value="2">Khối 2</option>
+                            </select>
+                            <select class="filter-select">
+                                <option value="">-- Chọn Lớp --</option>
+                                <option value="1A1">1A1</option>
+                                <option value="1A2">1A2</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group" id="teacher-filters" style="display: none;">
+                            <select class="filter-select">
+                                <option value="">-- Tổ chuyên môn --</option>
+                                <option value="to12">Tổ 1-2</option>
+                                <option value="to345">Tổ 3-4-5</option>
+                                <option value="nangkhieu">Tổ Năng khiếu</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-search">Tìm kiếm</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-results">
+            <div class="container">
+                <div class="results-header">
+                    <h3>Kết quả tìm kiếm</h3>
+                    <p>Tìm thấy <strong>2</strong> kết quả phù hợp</p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="card-avatar">
+                            <img src="https://placehold.co/100x100/e2e8f0/64748b?text=HS" alt="Avatar">
+                            <span class="badge class-badge">Lớp 1A1</span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Nguyễn Văn A</h4>
+                            <p><strong>Mã HS:</strong> HS2026001</p>
+                            <p><strong>Khối:</strong> 1</p>
+                            <p><strong>GVCN:</strong> Trần Thị B</p>
+                            <a href="#" class="btn btn-outline btn-sm">Xem điểm chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="card-avatar">
+                            <img src="https://placehold.co/100x100/e2e8f0/64748b?text=HS" alt="Avatar">
+                            <span class="badge class-badge">Lớp 1A1</span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Nguyễn Thị C</h4>
+                            <p><strong>Mã HS:</strong> HS2026002</p>
+                            <p><strong>Khối:</strong> 1</p>
+                            <p><strong>GVCN:</strong> Trần Thị B</p>
+                            <a href="#" class="btn btn-outline btn-sm">Xem điểm chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-placeholder"></footer>
+    
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Đánh dấu link đang active trong header vừa được chèn
+                (function markActive(){
+                    const links = document.querySelectorAll('#header-placeholder nav a');
+                    const current = location.pathname.split('/').pop() || 'TongQuan.html';
+                    links.forEach(a => {
+                        if (a.getAttribute('href') === current) a.classList.add('active');
+                        else a.classList.remove('active');
+                    });
+                })();
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        function switchTab(type) {
+            // Đổi style của Tab
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Ẩn/hiện bộ lọc tương ứng
+            if(type === 'student') {
+                document.getElementById('student-filters').style.display = 'flex';
+                document.getElementById('teacher-filters').style.display = 'none';
+            } else {
+                document.getElementById('student-filters').style.display = 'none';
+                document.getElementById('teacher-filters').style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>

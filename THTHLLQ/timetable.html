@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu | Trường Tiểu học Lạc Long Quân</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="timetable.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="header-placeholder"></header>
+
+    <main class="timetable-page">
+        
+        <section class="timetable-header-section">
+            <div class="container">
+                <div class="page-title">
+                    <h2>📅 Thời Khóa Biểu Cấp Trường</h2>
+                    <p>Phụ huynh vui lòng chọn Khối và Lớp để xem lịch học chi tiết của các con.</p>
+                </div>
+
+                <div class="filter-bar">
+                    <form action="#" class="filter-form">
+                        <div class="filter-item">
+                            <label for="khoi">Khối học</label>
+                            <select id="khoi" class="select-input">
+                                <option value="1">Khối 1</option>
+                                <option value="2">Khối 2</option>
+                                <option value="3">Khối 3</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <label for="lop">Lớp học</label>
+                            <select id="lop" class="select-input">
+                                <option value="1A1">Lớp 1A1</option>
+                                <option value="1A2">Lớp 1A2</option>
+                                <option value="1A3">Lớp 1A3</option>
+                            </select>
+                        </div>
+                        <div class="filter-item">
+                            <label for="tuan">Tuần học</label>
+                            <select id="tuan" class="select-input">
+                                <option value="tuan1">Tuần 1 (01/09 - 05/09)</option>
+                                <option value="tuan2">Tuần 2 (08/09 - 12/09)</option>
+                            </select>
+                        </div>
+                        <div class="filter-action">
+                            <button type="submit" class="btn btn-primary">Xem lịch học</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="timetable-content">
+            <div class="container">
+                <div class="timetable-wrapper">
+                    <div class="timetable-title-bar">
+                        <h3>Lớp 1A1 - Giáo viên Chủ nhiệm: Cô Trần Thị B</h3>
+                        <button class="btn btn-outline btn-sm">🖨️ In thời khóa biểu</button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Buổi</th>
+                                    <th>Tiết</th>
+                                    <th>Thứ Hai</th>
+                                    <th>Thứ Ba</th>
+                                    <th>Thứ Tư</th>
+                                    <th>Thứ Năm</th>
+                                    <th>Thứ Sáu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4" class="session-cell">SÁNG<br><small>(7:30 - 11:00)</small></td>
+                                    <td class="period-cell">1</td>
+                                    <td><div class="subject math">Toán</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject math">Toán</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject math">Toán</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="period-cell">2</td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject science">TN & XH</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="period-cell">3</td>
+                                    <td><div class="subject activity">SH Lớp</div></td>
+                                    <td><div class="subject pe">Thể dục</div></td>
+                                    <td><div class="subject language">Tiếng Việt</div></td>
+                                    <td><div class="subject math">Toán</div></td>
+                                    <td><div class="subject english">Tiếng Anh</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="period-cell">4</td>
+                                    <td><div class="subject english">Tiếng Anh</div></td>
+                                    <td><div class="subject math">Toán</div></td>
+                                    <td><div class="subject art">Âm nhạc</div></td>
+                                    <td><div class="subject pe">Thể dục</div></td>
+                                    <td><div class="subject activity">HĐTN</div></td>
+                                </tr>
+
+                                <tr class="break-row">
+                                    <td colspan="7">🍱 Nghỉ trưa và Bán trú tại trường (11:00 - 13:45) 🛌</td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="3" class="session-cell">CHIỀU<br><small>(14:00 - 16:30)</small></td>
+                                    <td class="period-cell">1</td>
+                                    <td><div class="subject reading">Tập đọc</div></td>
+                                    <td><div class="subject moral">Đạo đức</div></td>
+                                    <td><div class="subject english">Tiếng Anh</div></td>
+                                    <td><div class="subject art">Mỹ thuật</div></td>
+                                    <td><div class="subject activity">Sinh hoạt CLB</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="period-cell">2</td>
+                                    <td><div class="subject math">Luyện Toán</div></td>
+                                    <td><div class="subject reading">Luyện Viết</div></td>
+                                    <td><div class="subject reading">Kể chuyện</div></td>
+                                    <td><div class="subject reading">Luyện Viết</div></td>
+                                    <td><div class="subject activity">Sinh hoạt Lớp</div></td>
+                                </tr>
+                                <tr>
+                                    <td class="period-cell">3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td><div class="subject cleanup">Vệ sinh Lớp</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="timetable-note">
+                        <p><strong>Lưu ý:</strong> Phụ huynh vui lòng đón con đúng giờ. Học sinh tham gia CLB ngoại khóa vào chiều Thứ Sáu sẽ tan học lúc 17:00.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+      <footer id="footer-placeholder"></footer>
+    
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Đánh dấu link đang active trong header vừa được chèn
+                (function markActive(){
+                    const links = document.querySelectorAll('#header-placeholder nav a');
+                    const current = location.pathname.split('/').pop() || 'TongQuan.html';
+                    links.forEach(a => {
+                        if (a.getAttribute('href') === current) a.classList.add('active');
+                        else a.classList.remove('active');
+                    });
+                })();
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    </body>
+</html>

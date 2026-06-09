@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu | Trường Tiểu học Lạc Long Quân</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="intro.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+
+    <main class="intro-page">
+        <section class="intro-banner">
+            <div class="container banner-content">
+                <h2>Về Ngôi Nhà Lạc Long Quân</h2>
+                <p>Nơi ươm mầm những tài năng nhí, xây dựng nhân cách và tri thức từ những bước đi đầu tiên.</p>
+            </div>
+        </section>
+
+        <section class="intro-details">
+            <div class="container details-container">
+                <div class="text-block">
+                    <h3>Hành trình phát triển</h3>
+                    <p>Trường Tiểu học Lạc Long Quân được thành lập với mục tiêu mang đến một môi trường giáo dục toàn diện, nơi mỗi em học sinh đều được tôn trọng và phát triển theo năng lực riêng. Trải qua nhiều năm hoạt động, nhà trường tự hào là địa chỉ tin cậy của hàng ngàn phụ huynh trên địa bàn.</p>
+                    
+                    <div class="mission-vision">
+                        <div class="mv-card">
+                            <div class="mv-icon">👁️</div>
+                            <h4>Tầm nhìn</h4>
+                            <p>Trở thành ngôi trường tiểu học tiên phong trong việc đổi mới phương pháp giảng dạy, kiến tạo môi trường học tập hạnh phúc, an toàn và sáng tạo.</p>
+                        </div>
+                        <div class="mv-card">
+                            <div class="mv-icon">🎯</div>
+                            <h4>Sứ mệnh</h4>
+                            <p>Trang bị cho học sinh nền tảng kiến thức vững chắc, kỹ năng sống thiết thực và phẩm chất đạo đức tốt để tự tin vững bước vào tương lai.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-block">
+                    <img src="https://placehold.co/500x600/e2e8f0/1e3a8a?text=Hinh+Anh+Truong" alt="Hình ảnh trường Lạc Long Quân">
+                </div>
+            </div>
+        </section>
+
+        <section class="principal-message">
+            <div class="container message-container">
+                <div class="principal-image">
+                    <img src="https://placehold.co/300x300/1e3a8a/ffffff?text=Hinh+Hieu+Truong" alt="Hiệu trưởng">
+                </div>
+                <div class="message-content">
+                    <span class="quote-icon">“</span>
+                    <h3>Yêu thương và Thấu hiểu</h3>
+                    <p>Giáo dục tiểu học không chỉ là dạy chữ, mà còn là rèn người. Tại Lạc Long Quân, chúng tôi không tạo ra áp lực thành tích, mà chúng tôi tạo ra động lực để các con mỗi ngày đến trường là một ngày vui. Chúng tôi tin rằng, khi được học tập trong môi trường tràn ngập tình yêu thương và sự thấu hiểu, những hạt mầm tri thức sẽ tự động nảy nở một cách rực rỡ nhất.</p>
+                    <div class="signature">
+                        <strong>Cô Nguyễn Thị A</strong>
+                        <span>Hiệu trưởng nhà trường</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="core-values">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Giá trị cốt lõi</h3>
+                    <p>Kim chỉ nam cho mọi hoạt động giáo dục tại trường</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="v-icon">❤️</div>
+                        <h4>Tôn trọng</h4>
+                        <p>Tôn trọng sự khác biệt và năng lực cá nhân của từng học sinh.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="v-icon">🤝</div>
+                        <h4>Trách nhiệm</h4>
+                        <p>Rèn luyện ý thức tự giác và trách nhiệm với bản thân, gia đình.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="v-icon">💡</div>
+                        <h4>Sáng tạo</h4>
+                        <p>Khuyến khích tư duy đổi mới và mạnh dạn thể hiện ý tưởng.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="v-icon">😊</div>
+                        <h4>Hạnh phúc</h4>
+                        <p>Tạo dựng môi trường học đường tích cực, lan tỏa niềm vui.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-placeholder"></footer>
+    
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Đánh dấu link đang active trong header vừa được chèn
+                (function markActive(){
+                    const links = document.querySelectorAll('#header-placeholder nav a');
+                    const current = location.pathname.split('/').pop() || 'TongQuan.html';
+                    links.forEach(a => {
+                        if (a.getAttribute('href') === current) a.classList.add('active');
+                        else a.classList.remove('active');
+                    });
+                })();
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    </body>
+</html>
