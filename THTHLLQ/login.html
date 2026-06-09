@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập | Trường Tiểu học Lạc Long Quân</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="login.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="login-page">
+        <div class="container login-container">
+            <div class="login-card">
+                
+                <div class="login-image">
+                    <div class="image-overlay">
+                        <h3>Chào mừng trở lại!</h3>
+                        <p>Hệ thống quản lý nội bộ dành cho Cán bộ và Giáo viên trường Tiểu học Lạc Long Quân.</p>
+                    </div>
+                </div>
+
+                <div class="login-form-wrapper">
+                    <div class="login-header">
+                        <h2>Đăng nhập hệ thống</h2>
+                        <p>Vui lòng nhập thông tin tài khoản của bạn</p>
+                    </div>
+                    
+                    <form action="/api/auth/login" method="POST" class="login-form">
+                        <div class="form-group">
+                            <label for="username">Tên đăng nhập</label>
+                            <input type="text" id="username" name="username" placeholder="Nhập mã cán bộ hoặc email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" name="remember">
+                                <span>Ghi nhớ đăng nhập</span>
+                            </label>
+                            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                    </form>
+
+                    <div class="login-footer">
+                        <p>Bạn gặp sự cố? <a href="#">Liên hệ Quản trị viên</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    </body>
+</html>
