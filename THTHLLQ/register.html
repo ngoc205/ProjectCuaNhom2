@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký | Trường Tiểu học Lạc Long Quân</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="register-page">
+    <div class="container register-container">
+
+        <div class="register-card">
+
+            <div class="register-image">
+                <div class="image-overlay">
+                    <h3>Gia nhập hệ thống!</h3>
+                    <p>
+                        Tạo tài khoản cán bộ hoặc giáo viên
+                        để sử dụng hệ thống quản lý trường học.
+                    </p>
+                </div>
+            </div>
+
+            <div class="register-form-wrapper">
+
+                <div class="register-header">
+                    <h2>Đăng ký tài khoản</h2>
+                    <p>Vui lòng nhập đầy đủ thông tin bên dưới</p>
+                </div>
+
+                <form action="/api/auth/register" method="POST" class="register-form">
+
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" name="tenGiaoVien" placeholder="Nhập họ và tên" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tên đăng nhập</label>
+                        <input type="text" name="username" placeholder="Nhập tên đăng nhập" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="password" name="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Xác nhận mật khẩu</label>
+                        <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="text" name="soDienThoai" placeholder="Nhập số điện thoại">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" name="diaChi" placeholder="Nhập địa chỉ">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Chức vụ</label>
+                        <input type="text" name="chucVu" placeholder="Ví dụ: Giáo viên">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Đăng ký
+                    </button>
+
+                </form>
+
+                <div class="register-footer">
+                    <p>
+                        Đã có tài khoản?
+                        <a href="login.html">Đăng nhập</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

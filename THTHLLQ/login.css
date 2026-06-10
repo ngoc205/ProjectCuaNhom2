@@ -29,7 +29,7 @@
 .login-image {
     flex: 1;
     /* Thay link ảnh tại đây */
-    background: url('https://placehold.co/500x600/1e3a8a/ffffff?text=Hinh+Anh+Truong+Hoc') center/cover no-repeat;
+    background: url('../THTHLLQ/Images/Truonghoc.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: flex-end;
