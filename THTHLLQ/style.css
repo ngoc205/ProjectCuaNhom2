@@ -207,6 +207,7 @@ ul {
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
@@ -228,6 +229,31 @@ ul {
 .feature-card .icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.feature-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Xóa phần icon cũ */
+.feature-card .icon {
+    display: none;
 }
 
 .feature-card h4 {
@@ -247,6 +273,25 @@ ul {
 }
 
 .card-link:hover {
+    margin: 20px 20px 10px;
+}
+
+.feature-card p {
+    color: #64748b;
+    margin: 0 20px 20px;
+    line-height: 1.6;
+}
+
+.card-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.card-link:hover {
+    color: #d97706;
     text-decoration: underline;
 }
 
