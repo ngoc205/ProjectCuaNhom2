@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Tiểu học Lạc Long Quân | Trang chủ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <header id="header-placeholder"></header>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>Chào mừng đến với ngôi nhà chung Lạc Long Quân</h2>
+                    <p>Nơi khơi dậy niềm đam mê học tập, rèn luyện nhân cách và trang bị hành trang vững chắc cho những bước đi đầu đời của các em học sinh.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-secondary">Xem Thời Khóa Biểu</a>
+                        <a href="#" class="btn btn-outline">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../THTHLLQ/Images/AnhTruongHoc.jpg" alt="Hoạt động trường học">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Tiện ích tra cứu</h3>
+                    <p>Dành cho Phụ huynh và Khách truy cập</p>
+                </div>
+                <div class="feature-grid">
+
+    <div class="feature-grid">
+
+    <div class="feature-card">
+        <img src="../THTHLLQ/Images/tracuuhocsinh.jpg"
+             alt="Tra cứu học sinh"
+             class="feature-image">
+
+        <h4>Tra cứu Học sinh</h4>
+
+        <p>
+            Xem thông tin cơ bản và thành tích học tập của học sinh.
+        </p>
+
+        <a href="#" class="card-link">
+            Xem chi tiết →
+        </a>
+    </div>
+
+    <div class="feature-card">
+        <img src="../THTHLLQ/Images/doingugiaovien.jpg"
+             alt="Danh bạ giáo viên"
+             class="feature-image">
+
+        <h4>Danh bạ Giáo viên</h4>
+
+        <p>
+            Tìm kiếm thông tin và liên hệ với đội ngũ cán bộ, giáo viên.
+        </p>
+
+        <a href="#" class="card-link">
+            Xem chi tiết →
+        </a>
+    </div>
+
+    <div class="feature-card">
+        <img src="../THTHLLQ/Images/thoikhoabieu.jpg"
+             alt="Thời khóa biểu"
+             class="feature-image">
+
+        <h4>Thời khóa biểu</h4>
+
+        <p>
+            Cập nhật lịch học mới nhất theo từng khối lớp và giáo viên.
+        </p>
+
+        <a href="#" class="card-link">
+            Xem chi tiết →
+        </a>
+    </div>
+
+</div>
+</div>
+            </div>
+        </section>
+    </main>
+<footer id="footer-placeholder"></footer>
+    
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Đánh dấu link đang active trong header vừa được chèn
+                (function markActive(){
+                    const links = document.querySelectorAll('#header-placeholder nav a');
+                    const current = location.pathname.split('/').pop() || 'TongQuan.html';
+                    links.forEach(a => {
+                        if (a.getAttribute('href') === current) a.classList.add('active');
+                        else a.classList.remove('active');
+                    });
+                })();
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    </body>
+</html>
