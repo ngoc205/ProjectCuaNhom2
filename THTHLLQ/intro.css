@@ -170,6 +170,23 @@
 }
 
 .value-item {
+<<<<<<< HEAD
+    text-align: center;
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.v-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+=======
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
@@ -189,18 +206,27 @@
     height: 220px;
     object-fit: cover;
     display: block;
+>>>>>>> origin/lam
 }
 
 .value-item h4 {
     color: var(--primary-color);
+<<<<<<< HEAD
+    margin-bottom: 10px;
+=======
     font-size: 1.3rem;
     margin: 20px 20px 10px;
+>>>>>>> origin/lam
 }
 
 .value-item p {
     color: #64748b;
+<<<<<<< HEAD
+    font-size: 0.95rem;
+=======
     margin: 0 20px 25px;
     line-height: 1.6;
+>>>>>>> origin/lam
 }
 
 /* ================= RESPONSIVE ================= */
