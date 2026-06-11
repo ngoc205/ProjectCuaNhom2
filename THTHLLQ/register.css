@@ -142,3 +142,49 @@
     }
 
 }
+
+
+/* ================= NÚT TRANG CHỦ - ĐĂNG NHẬP ================= */
+
+.extra-actions{
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.extra-actions a{
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .95rem;
+    transition: all .3s ease;
+}
+
+/* Đăng nhập */
+
+.login-link{
+    color: white;
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.login-link:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .extra-actions{
+        flex-direction: column;
+    }
+
+    .extra-actions a{
+        text-align: center;
+    }
+
+}
